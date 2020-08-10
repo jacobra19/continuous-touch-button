@@ -1,6 +1,7 @@
 {
   "name": "continuous-touch-button",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "button with animation on touch",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,29 +17,21 @@
     "@babel/preset-react": "^7.10.1",
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
-    "css-loader": "^3.6.0",
-    "file-loader": "^6.0.0"
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
-    "axios": "^0.19.2",
-    "chalk": "^4.1.0",
-    "clear": "^0.1.0",
-    "dotenv": "^8.2.0",
-    "figlet": "^1.4.0",
-    "lodash": "^4.17.15",
-    "moment": "^2.27.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router": "^5.2.0",
-    "typescript": "^3.9.5",
-    "uuid": "^8.1.0"
+    "react-dom": "^16.13.1"
   }
 }
