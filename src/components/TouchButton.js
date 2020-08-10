@@ -1,24 +1,44 @@
-import React from 'react';
+import React, {useState} from 'react';
+import MicIcon from '@material-ui/icons/Mic';
+require('./TouchButtonStyle.scss')
 
 const TouchButton = () => {
+    const [isTouch, setIsTouch] = useState(false);
     const styles = (s) => {
+
         const styles = {
             root:{
-                width:300,
-                height: 300,
-                backgroundColor: 'yellow',
+                width:100,
+                height: 100,
+                backgroundColor: isTouch ?'#ff5656': '#ff4242',
                 borderRadius:'50%',
-                '&:hover':{
-                    backgroundColor:'red',
-                }
+                display:'flex',
+                justifyContent: "center",
+                alignItems: "center",
+
+            },
+            micIcon:{
+                width:70,
+                height:70,
+                color:isTouch ? 'white' : 'whitesmoke',
             }
         }
 
         return (styles[s])
     }
+
+    const handleButton = (isOn) => {
+        setIsTouch(isOn)
+    }
+
     return (
-        <div style={styles('root')} onTouchStart={()=>{console.log(1)}} onTouchEnd={()=>{console.log(2)}}>
-            btn
+        <div style={styles('root')}  className={isTouch ? 'waves' : ''}
+            onTouchStart={(e)=>{handleButton(true)}} 
+            onTouchEnd={(e)=>{handleButton(false)}}
+            onMouseDown={(e)=>{handleButton(true)}} 
+            onMouseUp={(e)=>{handleButton(false)}}
+        >
+            <MicIcon style={styles('micIcon')}/>
         </div>
     );
 }
