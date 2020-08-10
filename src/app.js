@@ -5,7 +5,6 @@ const App = () => {
 
     return (
         <div>
-            hello app
             <TouchButton/>
         </div>
     );
